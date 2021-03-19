@@ -1,0 +1,13 @@
+C:\Users\hyalc\source\repos\Models\bin\Debug\netcoreapp3.1\ModelLibrary.exe
+C:\Users\hyalc\source\repos\Models\bin\Debug\netcoreapp3.1\ModelLibrary.deps.json
+C:\Users\hyalc\source\repos\Models\bin\Debug\netcoreapp3.1\ModelLibrary.runtimeconfig.json
+C:\Users\hyalc\source\repos\Models\bin\Debug\netcoreapp3.1\ModelLibrary.runtimeconfig.dev.json
+C:\Users\hyalc\source\repos\Models\bin\Debug\netcoreapp3.1\ModelLibrary.dll
+C:\Users\hyalc\source\repos\Models\bin\Debug\netcoreapp3.1\ModelLibrary.pdb
+C:\Users\hyalc\source\repos\Models\obj\Debug\netcoreapp3.1\ModelLibrary.csprojAssemblyReference.cache
+C:\Users\hyalc\source\repos\Models\obj\Debug\netcoreapp3.1\ModelLibrary.AssemblyInfoInputs.cache
+C:\Users\hyalc\source\repos\Models\obj\Debug\netcoreapp3.1\ModelLibrary.AssemblyInfo.cs
+C:\Users\hyalc\source\repos\Models\obj\Debug\netcoreapp3.1\ModelLibrary.csproj.CoreCompileInputs.cache
+C:\Users\hyalc\source\repos\Models\obj\Debug\netcoreapp3.1\ModelLibrary.dll
+C:\Users\hyalc\source\repos\Models\obj\Debug\netcoreapp3.1\ModelLibrary.pdb
+C:\Users\hyalc\source\repos\Models\obj\Debug\netcoreapp3.1\ModelLibrary.genruntimeconfig.cache

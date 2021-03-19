@@ -1,0 +1,12 @@
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\net5.0\DataLibrary.deps.json
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\net5.0\DataLibrary.dll
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\net5.0\ref\DataLibrary.dll
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\net5.0\DataLibrary.pdb
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\net5.0\DataLibrary.csprojAssemblyReference.cache
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\net5.0\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\net5.0\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\net5.0\DataLibrary.AssemblyInfo.cs
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\net5.0\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\net5.0\DataLibrary.dll
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\net5.0\ref\DataLibrary.dll
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\net5.0\DataLibrary.pdb

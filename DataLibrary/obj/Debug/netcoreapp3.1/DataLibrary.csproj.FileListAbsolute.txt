@@ -1,0 +1,13 @@
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.deps.json
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.dll
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.pdb
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csprojAssemblyReference.cache
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.AssemblyInfo.cs
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.dll
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.pdb
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\netcoreapp3.1\ModelLibrary.exe
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\netcoreapp3.1\ModelLibrary.dll
+C:\Users\hyalc\source\repos\DataLibrary\bin\Debug\netcoreapp3.1\ModelLibrary.pdb
+C:\Users\hyalc\source\repos\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csproj.CopyComplete

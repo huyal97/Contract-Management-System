@@ -1,0 +1,29 @@
+﻿@model ModelLibrary.Models.PersonelAylikSaat
+
+<h4>Aylik Saat</h4>
+<hr />
+<form asp-action="UpdateAylikSaat">
+    <div class="row">
+        
+
+        <div class="col-md-4">
+            <partial name="~/Views/Personel/_GerceklesenAylikSaat.cshtml" model="new ModelLibrary.Models.PersonelAylikSaat()" />
+
+        </div>
+        <div class="col-md-4">
+            <partial name="~/Views/Personel/_PlanlananAylikSaatForm.cshtml" model="new ModelLibrary.Models.PlanlananPersonelAylikSaat()" />
+        </div>
+        <div class="col-md-4">
+            <partial name="~/Views/Personel/_FaturalananPersonelAylikSaat.cshtml" model="new ModelLibrary.Models.FaturalananPersonelAylikSaat()" />
+        </div>
+
+
+
+
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

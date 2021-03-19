@@ -1,0 +1,113 @@
+﻿@model IEnumerable<OtomatikSozlesme.Models.SozlesmeModel>
+
+@{
+    ViewData["Title"] = "Sözleşmeler";
+}
+<div>
+    
+
+    <p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Yeni Sozlesme Olustur</button>
+    </p>
+    <script type="text/javascript" charset="utf8">
+        $(document).ready(function () {
+            $('#tbl1').DataTable();
+        });
+    </script>
+    <table id="tbl1" class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Firma)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tarih)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arti_Eksilis)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Baslik)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Talep_Tarihi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tamamlanma_Tarihi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bolge)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sorumlu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Faturalama_Durum)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Firma)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tarih)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arti_Eksilis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Talep_Tarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tamamlanma_Tarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bolge)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sorumlu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Faturalama_Durum)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateSozlesme", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "SilSozlesmeData", new { id = item.Id })
+                </td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+    <div class="modal fade" id="Modal1" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kayit Ol</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="myForm" action="/Sozlesme/SignUp" method="Post">
+                        <div class="container">
+                            
+                            <partial name="~/Views/Sozlesme/CreateSozlesme.cshtml" model="new OtomatikSozlesme.Models.SozlesmePersonelModel()" />
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

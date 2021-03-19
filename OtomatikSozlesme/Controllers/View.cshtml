@@ -1,0 +1,54 @@
+﻿@model OtomatikSozlesme.Models.ModelSallama
+
+<h4>ModelSallama</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="View">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdamSaat" class="control-label"></label>
+                <input asp-for="AdamSaat" class="form-control" />
+                <span asp-validation-for="AdamSaat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SorumluYonetici" class="control-label"></label>
+                <input asp-for="SorumluYonetici" class="form-control" />
+                <span asp-validation-for="SorumluYonetici" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rate" class="control-label"></label>
+                <input asp-for="Rate" class="form-control" />
+                <span asp-validation-for="Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bolge" class="control-label"></label>
+                <input asp-for="Bolge" class="form-control" />
+                <span asp-validation-for="Bolge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KaynakTipi" class="control-label"></label>
+                <input asp-for="KaynakTipi" class="form-control" />
+                <span asp-validation-for="KaynakTipi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sozlesme_Id" class="control-label"></label>
+                <input asp-for="Sozlesme_Id" class="form-control" />
+                <span asp-validation-for="Sozlesme_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

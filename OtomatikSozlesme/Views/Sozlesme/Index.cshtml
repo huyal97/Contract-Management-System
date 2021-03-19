@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">SÖZLEŞME YÖNETİM SİSTEMİ</h1>
+    <div style="margin-top:200px;">
+        <button onclick="location.href='@Url.Action("ViewSozlesmeData", "Home")'" type="button" class="btn btn-primary btn-lg">       SÖZLEŞMELER      </button>
+        @*<button onclick="location.href='@Url.Action("TaslakCreator", "Taslak")'" type="button" class="btn btn-primary btn-lg">       SÖZLEŞMELER      </button>*@
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿@model ModelLibrary.Models.AylikSaatComboBox
+
+<h4>Ay Seçiniz</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateAylikSaatWithComboBox">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display: none;">
+                <label asp-for="combobox_id" class="control-label"></label>
+                <input asp-for="combobox_id" class="form-control" />
+                <span asp-validation-for="combobox_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                    @Html.DropDownListFor(m => m.ListMonths,
+                new SelectList(Enum.GetValues(typeof(ModelLibrary.Models.AylikSaatComboBox.Months))),
+                "Ay Seçiniz", new { @class = "custom-select" })
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Value" class="control-label"></label>
+                <input asp-for="Value" class="form-control" />
+                <span asp-validation-for="Value" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

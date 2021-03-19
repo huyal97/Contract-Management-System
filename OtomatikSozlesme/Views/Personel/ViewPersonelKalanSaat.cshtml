@@ -1,0 +1,191 @@
+﻿@model IEnumerable<ModelLibrary.Models.AdamSaatGorunum>
+@{
+    ViewData["Title"] = "Personeller";
+}
+<div>
+    <p>
+
+    </p>
+    <script type="text/javascript" charset="utf8">
+        $(document).ready(function () {
+            $('#tbl1').DataTable();
+
+        });
+
+
+        function GetDetails(id) {
+            $.ajax({
+                url: "/Personel/UpdateAylikSaat/" + id,
+                type: "GET",
+                contentType: "Application/json;charset=UTF-8",
+                dataType: "json",
+                success: function (response) {
+
+                    const obj = JSON.parse(response);
+                    //Gerceklesen
+                    $('#PERSONEL_ID').val(obj.PERSONEL_ID);
+                    $('#OCAK').val(obj.OCAK);
+                    $('#SUBAT').val(obj.SUBAT);
+                    $('#MART').val(obj.MART);
+                    $('#NISAN').val(obj.NISAN);
+                    $('#MAYIS').val(obj.MAYIS);
+                    $('#HAZIRAN').val(obj.HAZIRAN);
+                    $('#TEMMUZ').val(obj.TEMMUZ);
+                    $('#AGUSTOS').val(obj.AGUSTOS);
+                    $('#EYLUL').val(obj.EYLUL);
+                    $('#EKIM').val(obj.EKIM);
+                    $('#KASIM').val(obj.KASIM);
+                    $('#ARALIK').val(obj.ARALIK);
+                    //Planlan
+                    $('#POCAK').val(obj.POCAK);
+                    $('#PSUBAT').val(obj.PSUBAT);
+                    $('#PMART').val(obj.PMART);
+                    $('#PNISAN').val(obj.PNISAN);
+                    $('#PMAYIS').val(obj.PMAYIS);
+                    $('#PHAZIRAN').val(obj.PHAZIRAN);
+                    $('#PTEMMUZ').val(obj.PTEMMUZ);
+                    $('#PAGUSTOS').val(obj.PAGUSTOS);
+                    $('#PEYLUL').val(obj.PEYLUL);
+                    $('#PEKIM').val(obj.PEKIM);
+                    $('#PKASIM').val(obj.PKASIM);
+                    $('#PARALIK').val(obj.PARALIK);
+                    //Faturalanan
+                    $('#FOCAK').val(obj.FOCAK);
+                    $('#FSUBAT').val(obj.FSUBAT);
+                    $('#FMART').val(obj.FMART);
+                    $('#FNISAN').val(obj.FNISAN);
+                    $('#FMAYIS').val(obj.FMAYIS);
+                    $('#FHAZIRAN').val(obj.FHAZIRAN);
+                    $('#FTEMMUZ').val(obj.FTEMMUZ);
+                    $('#FAGUSTOS').val(obj.FAGUSTOS);
+                    $('#FEYLUL').val(obj.FEYLUL);
+                    $('#FEKIM').val(obj.FEKIM);
+                    $('#FKASIM').val(obj.FKASIM);
+                    $('#FARALIK').val(obj.FARALIK);
+
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+
+
+        function Open(currentId) {
+
+            $('#combobox_id').val(currentId);;
+
+        }
+    </script>
+
+
+    </script>
+
+    <table id="tbl1" class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ISIM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UZMANLIK)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FIRMA)
+
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ADAMSAAT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TOPLAM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KALAN)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ISIM)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UZMANLIK)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FIRMA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ADAMSAAT)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TOPLAM)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KALAN)
+                    </td>
+                    <td>
+
+                        <a onclick="Open(@item.PERSONEL_ID)" data-toggle="modal" data-target="#ModalDropList" href="#">Saat Ekle</a> |
+                        <a onclick="GetDetails(@item.PERSONEL_ID)" data-toggle="modal" data-target="#Modal1" href="#">Aylık Detaylar</a>
+
+                        @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="Modal1" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Personel Saat Bilgisi</h5>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <partial name="~/Views/Personel/_CreateAylikSaat.cshtml" model="new ModelLibrary.Models.PersonelAylikSaat()" />
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="ModalDropList" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aylık Saat Ekle</h5>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <partial name="~/Views/Personel/_UpdateAylikSaatDroplist.cshtml" model="new ModelLibrary.Models.AylikSaatComboBox()" />
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>

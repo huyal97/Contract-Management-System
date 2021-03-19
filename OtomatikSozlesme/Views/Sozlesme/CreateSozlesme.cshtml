@@ -1,0 +1,161 @@
+﻿@model OtomatikSozlesme.Models.SozlesmePersonelModel
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+<div>
+    <h2>Yeni Sözleşme Oluştur</h2>
+
+
+    <hr />
+
+    <div>
+        @using (Html.BeginForm("SignUp", "Sozlesme", FormMethod.Post))
+        {
+        <div class="row">
+
+            <div class="form-group">
+                <label For=Firma class="control-label">Firma</label>
+                <input type="text" name="Firma" class="form-control form-control-sm" />
+
+            </div>
+            <div class="form-group">
+                <label for="Tarih" class="control-label">Tarih</label>
+                <input type="date" name="Tarih" class="form-control form-control-sm" />
+
+            </div>
+            <div class="form-group">
+                <label for="TarihBitis" class="control-label">Bitis Tarihi</label>
+                <input type="date" name="TarihBitis" class="form-control form-control-sm" />
+
+            </div>
+            <div class="form-group">
+                <label for="Arti_Eksilis" class="control-label">Artış eksiliş</label>
+                <input type="number" name="Arti_Eksilis" class="form-control form-control-sm" />
+
+            </div>
+            <div class="form-group">
+                <label for="Baslik" class="control-label">Başlık</label>
+                <input type="text" name="Baslik" class="form-control form-control-sm" />
+
+            </div>
+            <div class="form-group">
+                <label for="Talep_Tarihi" class="control-label" Talep Tarihi>Talep Tarihi</label>
+                <input type="date" name="Talep_Tarihi" class="form-control form-control-sm" />
+
+            </div>
+            <div class="form-group">
+                <label for="Tamamlanma_Tarihi" class="control-label">Tamamlanma Tarihi</label>
+                <input type="date" name="Tamamlanma_Tarihi" class="form-control form-control-sm" />
+
+            </div>
+            <div class="form-group">
+                <label for="Sorumlu" class="control-label">Sorumlu</label>
+                <input type="text" name="Sorumlu" class="form-control form-control-sm" />
+
+            </div>
+
+            <div class="form-group">
+                <label for="Faturalama_Durum" class="control-label">Faturalama Durumu</label>
+                <select type="text" name="Faturalama_Durum" class="custom-select custom-select-sm">
+                    <option selected>Bölge Seçiniz</option>
+                    <option value="True">Evet</option>
+                    <option value="False">Hayır</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label for="Bolge" class="control-label">Bölge</label>
+                <select type="text" name="Bolge" class="custom-select custom-select-sm">
+                    <option selected>Bölge Seçiniz</option>
+                    <option value="Başkent">Başkent</option>
+                    <option value="Ayeşaş">Ayeşaş</option>
+
+                </select>
+
+            </div>
+
+
+
+
+        </div>
+
+
+            <div id="container1">
+                <h4>Personel:</h4>
+
+            </div>
+            
+            <div class="form-group">
+                <button class="btn btn-primary" id="add_form_field">
+
+                    <span style="font-size:16px; font-weight:bold;">+ </span>
+                </button>
+                <input type="submit" value="Oluştur" class="btn btn-primary" style="float: right;" />
+            </div>
+
+        }
+    </div>
+
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            var max_fields = 10;
+            var wrapper = $("#container1");
+            var add_button = $("#add_form_field");
+
+            var x = 0;
+            $(add_button).click(function (e) {
+                e.preventDefault();
+                if (x < max_fields) {
+                    x++;
+                    $(wrapper).append('<div class= "row">\
+    <div class="form-group">\
+        <label for="Adamsaat' + x + '" class="control-label">Adam Saat</label>\
+        <input type="number" name="Adamsaat' + x + '" class="form-control form-control-sm"/>\
+    </div>\
+	<div class="form-group">\
+        <label for="SorumluYonetici' + x + '" class="control-label">Sorumlu Yönetici</label>\
+        <input type="text" name="SorumluYonetici' + x + '" class="form-control form-control-sm"/>\
+	</div>\
+	<div class="form-group">\
+        <label for="Rate' + x + '" class="control-label">Rate</label>\
+		<input type="number" name="Rate' + x + '" class="form-control form-control-sm"/>\
+    </div>\
+    <div class="form-group">\
+		<label for="KaynakTipi'+ x +'" class="control-label">Kaynak Tipi</label>\
+		<select type="text" name="KaynakTipi' + x + '" class="custom-select custom-select-sm">\
+			<option selected>Kaynak Tipi Seciniz</option>\
+			<option value="Uzman">Uzman</option>\
+			<option value="Deneyimli">Deneyimli</option>\
+			<option value="Kıdemli">Kıdemli</option>\
+		</select>\
+	</div>\
+    <div class="form-group">\
+		<label for="Uzmanlik' + x + '" class="control-label">Uzmanlık</label>\
+		<input type="text" name="Uzmanlik' + x + '" class="form-control form-control-sm"/>\
+    </div>\
+	<div class="form-group">\
+		<label for="Isim' + x + '" class="control-label">Isim</label>\
+		<input type="text" name="Isim' + x + '" class="form-control form-control-sm"/>\
+	</div></div>'); //add input box
+                } else {
+                    alert('You Reached the limits')
+                }
+            });
+
+            $(wrapper).on("click", ".delete", function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x--;
+            })
+        });
+
+    </script>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</div>

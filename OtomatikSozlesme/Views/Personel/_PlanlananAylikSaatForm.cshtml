@@ -1,0 +1,91 @@
+﻿@model ModelLibrary.Models.PlanlananPersonelAylikSaat
+
+<h4>Planlanan</h4>
+<hr />
+
+
+
+<input type="hidden" asp-for="PERSONEL_ID" class="form-control" />
+
+<div class="form-group">
+    <label asp-for="POCAK" class="control-label"></label>
+    <input asp-for="POCAK" id="txt1" class="form-control" />
+    <span asp-validation-for="POCAK" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PSUBAT" class="control-label"></label>
+    <input asp-for="PSUBAT" class="form-control" />
+    <span asp-validation-for="PSUBAT" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PMART" class="control-label"></label>
+    <input asp-for="PMART" class="form-control" />
+    <span asp-validation-for="PMART" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PNISAN" class="control-label"></label>
+    <input asp-for="PNISAN" class="form-control" />
+    <span asp-validation-for="PNISAN" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PMAYIS" class="control-label"></label>
+    <input asp-for="PMAYIS" class="form-control" />
+    <span asp-validation-for="PMAYIS" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PHAZIRAN" class="control-label"></label>
+    <input asp-for="PHAZIRAN" class="form-control" />
+    <span asp-validation-for="PHAZIRAN" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PTEMMUZ" class="control-label"></label>
+    <input asp-for="PTEMMUZ" class="form-control" />
+    <span asp-validation-for="PTEMMUZ" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PAGUSTOS" class="control-label"></label>
+    <input asp-for="PAGUSTOS" class="form-control" />
+    <span asp-validation-for="PAGUSTOS" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PEYLUL" class="control-label"></label>
+    <input asp-for="PEYLUL" class="form-control" />
+    <span asp-validation-for="PEYLUL" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PEKIM" class="control-label"></label>
+    <input asp-for="PEKIM" class="form-control" />
+    <span asp-validation-for="PEKIM" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PKASIM" class="control-label"></label>
+    <input asp-for="PKASIM" class="form-control" />
+    <span asp-validation-for="PKASIM" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PARALIK" class="control-label"></label>
+    <input asp-for="PARALIK" class="form-control" />
+    <span asp-validation-for="PARALIK" class="text-danger"></span>
+</div>
+
+
+
+
+
+<script>
+
+        $(function () {
+
+            $("#txt1").change(function () {
+
+                alert("Triigger Change Event!");
+
+            });
+
+          
+
+        });
+
+</script>
+
+

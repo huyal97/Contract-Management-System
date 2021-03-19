@@ -1,0 +1,79 @@
+﻿@model ModelLibrary.Models.PersonelAylikSaat
+
+<h4>PersonelAylikSaat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AylikSaatUpdate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OCAK" class="control-label"></label>
+                <input asp-for="OCAK" class="form-control" />
+                <span asp-validation-for="OCAK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SUBAT" class="control-label"></label>
+                <input asp-for="SUBAT" class="form-control" />
+                <span asp-validation-for="SUBAT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MART" class="control-label"></label>
+                <input asp-for="MART" class="form-control" />
+                <span asp-validation-for="MART" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NISAN" class="control-label"></label>
+                <input asp-for="NISAN" class="form-control" />
+                <span asp-validation-for="NISAN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MAYIS" class="control-label"></label>
+                <input asp-for="MAYIS" class="form-control" />
+                <span asp-validation-for="MAYIS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HAZIRAN" class="control-label"></label>
+                <input asp-for="HAZIRAN" class="form-control" />
+                <span asp-validation-for="HAZIRAN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TEMMUZ" class="control-label"></label>
+                <input asp-for="TEMMUZ" class="form-control" />
+                <span asp-validation-for="TEMMUZ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AGUSTOS" class="control-label"></label>
+                <input asp-for="AGUSTOS" class="form-control" />
+                <span asp-validation-for="AGUSTOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EYLUL" class="control-label"></label>
+                <input asp-for="EYLUL" class="form-control" />
+                <span asp-validation-for="EYLUL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EKIM" class="control-label"></label>
+                <input asp-for="EKIM" class="form-control" />
+                <span asp-validation-for="EKIM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KASIM" class="control-label"></label>
+                <input asp-for="KASIM" class="form-control" />
+                <span asp-validation-for="KASIM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ARALIK" class="control-label"></label>
+                <input asp-for="ARALIK" class="form-control" />
+                <span asp-validation-for="ARALIK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

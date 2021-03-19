@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using DataLibrary.Models;
+using DataLibrary.DataAccess;
+
+namespace DataLibrary.BusinessLogic
+{
+    public static class TaslakProcessor
+    {
+        public static int CreateTaslak(TaslakDatabaseModel data)
+        {
+            string sql = @"INSERT INTO SOZLESMEDATA (SIRKETADI,SARTNAMEADI,IS_TANIM_1,ALT_YUKLENICI_2,GARANTI_SURESI_3 ,EGITIM_SARTLARI_4, ISIN_KAPSAMI_5, SOZLESME_BEDELINE_UNSURLARI_6,ISIN_YERI_SURESI_7,ISIN_TESLIM_KABUL_SARTLARI_8,YUKLENICI_PERSONEL_ARANAN_NITELIKLER_9,ISIN_IFASINDA_PERSONEL_10,FIYAT_FARKI_11,ISE_BASLAMA_12) VALUES (:SIRKETADI,:SARTNAMEADI,:IS_TANIM_1,:ALT_YUKLENICI_2,:GARANTI_SURESI_3, :EGITIM_SARTLARI_4, :ISIN_KAPSAMI_5, :SOZLESME_BEDELINE_UNSURLARI_6,:ISIN_YERI_SURESI_7,:ISIN_TESLIM_KABUL_SARTLARI_8,:YUKLENICI_PERSONEL_ARANAN_NITELIKLER_9,:ISIN_IFASINDA_PERSONEL_10,:FIYAT_FARKI_11,:ISE_BASLAMA_12)";
+           
+            return DataAccess.SqlDataAccess.SaveData<TaslakDatabaseModel>(sql, data);
+
+        }
+    }
+}

@@ -1,0 +1,134 @@
+﻿@model OtomatikSozlesme.Models.SozlesmePersonelModel
+
+<h4>SozlesmePersonelModel</h4>
+<hr />
+<div class="row">
+
+    @using (Html.BeginForm("UpdateSozlesme", "Home", FormMethod.Post))
+    {
+    <div class="row">
+        <div class="col-md-4">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <div class="form-group" style="display: none;">
+                    <label asp-for="Sozlesme.Id" class="control-label"></label>
+                    <input asp-for="Sozlesme.Id" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Firma" class="control-label"></label>
+                    <input asp-for="Sozlesme.Firma" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Firma" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Tarih" class="control-label"></label>
+                    <input asp-for="Sozlesme.Tarih" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Tarih" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Arti_Eksilis" class="control-label"></label>
+                    <input asp-for="Sozlesme.Arti_Eksilis" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Arti_Eksilis" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Baslik" class="control-label"></label>
+                    <input asp-for="Sozlesme.Baslik" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Baslik" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Talep_Tarihi" class="control-label"></label>
+                    <input asp-for="Sozlesme.Talep_Tarihi" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Talep_Tarihi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Tamamlanma_Tarihi" class="control-label"></label>
+                    <input asp-for="Sozlesme.Tamamlanma_Tarihi" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Tamamlanma_Tarihi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Bolge" class="control-label"></label>
+                    <input asp-for="Sozlesme.Bolge" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Bolge" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Sorumlu" class="control-label"></label>
+                    <input asp-for="Sozlesme.Sorumlu" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Sorumlu" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sozlesme.Faturalama_Durum" class="control-label"></label>
+                    <input asp-for="Sozlesme.Faturalama_Durum" class="form-control" />
+                    <span asp-validation-for="Sozlesme.Faturalama_Durum" class="text-danger"></span>
+                </div>
+
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <div class="row">
+
+                @foreach (var item in Model.Personels)
+
+                {
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="form-group" style="display: none;">
+
+                                    <label asp-for="@item.Personel_Id" class="control-label"></label>
+                                    <input asp-for="@item.Personel_Id" class="form-control" />
+                                    <span asp-validation-for="@item.Personel_Id" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="@item.AdamSaat" class="control-label"></label>
+                                    <input asp-for="@item.AdamSaat" class="form-control" />
+                                    <span asp-validation-for="@item.AdamSaat" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="@item.SorumluYonetici" class="control-label"></label>
+                                    <input asp-for="@item.SorumluYonetici" class="form-control" />
+                                    <span asp-validation-for="@item.SorumluYonetici" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="@item.Rate" class="control-label"></label>
+                                    <input asp-for="@item.Rate" class="form-control" />
+                                    <span asp-validation-for="@item.Rate" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="@item.Bolge" class="control-label"></label>
+                                    <input asp-for="@item.Bolge" class="form-control" />
+                                    <span asp-validation-for="@item.Bolge" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="@item.KaynakTipi" class="control-label"></label>
+                                    <input asp-for="@item.KaynakTipi" class="form-control" />
+                                    <span asp-validation-for="@item.KaynakTipi" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="@item.Sozlesme_Id" class="control-label"></label>
+                                    <input asp-for="@item.Sozlesme_Id" class="form-control" />
+                                    <span asp-validation-for="@item.Sozlesme_Id" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                }
+
+
+            </div>
+        </div>
+        
+    </div>
+    }
+</div>
+
+            
+        
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+
